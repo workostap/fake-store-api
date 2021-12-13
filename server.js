@@ -40,7 +40,7 @@ app.use("/auth", authRoute);
 mongoose.set("useFindAndModify", false);
 mongoose.set("useUnifiedTopology", true);
 mongoose
-  .connect("database credential", { useNewUrlParser: true })
+  .connect("mongodb+srv://AnnaTest:AB12219ab@cluster0.kishn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { useNewUrlParser: true })
   .then(() => {
     app.listen(process.env.PORT || port, () => {
       console.log("connect");
